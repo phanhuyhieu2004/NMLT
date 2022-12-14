@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đoán số lặp vô hạn</title>
+</head>
+<body>
+    
+    
+    <input type="button"value="Chơi" onclick="gamegussnum()"/>
+
+    <script>
+      function gamegussnum() {
+   
+    let rnd = 10+ Math.round(Math.random() * 3);
+    let gussNum ;
+
+
+    do {
+    gussNum = Number(prompt('Nhập số dự đoán vào đây :'))
+    if (gussNum == rnd) {
+        alert ('Bạn đã đoán đúng')
+     } else if  (gussNum < rnd){
+        alert ('Số dự đoán nhỏ hơn ')
+        
+    } else {
+        alert ('Số dự đoán lớn hơn ')
+        
+    }
+} while (rnd != gussNum);
+      }
+
+</script>
+  
+</body>
+</html>
