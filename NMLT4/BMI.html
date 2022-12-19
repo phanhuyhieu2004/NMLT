@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+</head>
+<body>
+    <script>
+        let Chieucao = parseInt(prompt("Nhập chiều cao"))
+        console.log(typeof(Chieucao))
+        let Cannang = parseInt(prompt("Nhập cân nặng"))
+        console.log(typeof(Cannang))
+        let BMI = Cannang/(Chieucao^2)
+     if (BMI>40) {
+         alert("Béo phì cấp độ III,cần giảm cân !!!")
+         } else if (35<=BMI) {
+                 alert("Béo phì cấp độ II,cần giảm cân !!!")
+                 } else if (30<=BMI) {
+                         alert("Béo phì cấp độ I,cần giảm cân !!!")
+                          } else  if (25<=BMI){
+                            alert("Thừa cân,cần giảm cân !!!")
+                           }  else if (18.5<=BMI){
+                                    alert("Bình thường,duy trì nhé")
+                                 }     else if (17<=BMI) {
+                                             alert("Gầy cấp độ I,cần bổ sung dinh dưỡng")
+                                         } else if (16<=BMI) {
+                                              alert("Gầy cấp độ II,cần bổ sung dinh dưỡng")
+                                             } else {
+                                                 alert("Gầy cấp độ III,cần bổ sung dinh dưỡng");
+                                                 
+                                                   }
+                                         
+                             
+     </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<title>reverse_number.html</title>
+<script type ="text/javascript">
+function revNum()
+{
+var number = prompt("Mời nhập số :", " ");
+var n= number;
+var rev = 0, remaining;
+while (n>0)
+{
+remaining = n % 10;
+rev = rev * 10 + remaining ;
+n = Math.floor(n/10);
+}
+document.write("Số cần đảo ngược : " +number+ " <br/> Số đảo ngược  : " +rev+ "\n");
+}
+</script>
+<body onload="revNum();">
+<body>
+</html>
