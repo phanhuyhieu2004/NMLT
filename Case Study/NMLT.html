@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS NMLT Cơ bản</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+
+<body style="background-image: url(https://topchiase24h.com/wp-content/uploads/2021/04/Hinh-nen-hoa-anh-dao-anime-32.jpg);">
+    <!-- Phần hiển thị trên màn hình
+    
+    <label> định nghĩa nhãn cho thành phần <input />.
+     <label> không hiển thị bất cứ gì đặc biệt cho người dùng, tuy nhiên nó cung cấp một cải thiện cho người sử dụng chuột, nếu click chuột vào nhãn, sẽ đưa con trỏ chuột vào vùng <input />.
+    Muốn sử dụng hiệu quả <label>, cần thiết phải cho giá trị id của <input /> và giá trị for của <label>, hai giá trị này phải trùng nhau.
+     <input /> được sử dụng cho người dùng nhập hay chọn thông tin.
+    <id></id> dùng để đặt tên cho một phần tử trong HTML, mỗi thuộc tính id chỉ chỉ định cho một phần tử duy nhất trong file HTML hiện hành
+    Tùy vào những thông tin cần nhập,chúng ta sẽ tạo khung hiển thị để nhập các dữ liệu cần thiết vào  -->
+    <style>
+        .f1-effect {
+        position: relative;
+        z-index: 99999999; }
+        .f1-effect .f1-effect-flower {
+        opacity: 1;
+        border-radius: 100%;
+        background: url(https://file.hstatic.net/200000259653/file/pages_17a8568517e94dcd9c8aec5587_570924d1fa4b4da1aa011044c9d7cc1c.png);
+        position: fixed;
+        top: -10%;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        cursor: default;
+        -webkit-animation-name: snowflakes-fall, snowflakes-shake;
+        -webkit-animation-duration: 10s, 3s;
+        -webkit-animation-timing-function: linear, ease-in-out;
+        -webkit-animation-iteration-count: infinite, infinite;
+        -webkit-animation-play-state: running, running;
+        animation-name: snowflakes-fall, snowflakes-shake;
+        animation-duration: 10s, 3s;
+        animation-timing-function: linear, ease-in-out;
+        animation-iteration-count: infinite, infinite;
+        animation-play-state: running, running; }
+        @media (max-width: 767px) {
+    .f1-effect .f1-effect-flower:nth-of-type(2n) {
+        display: none; } }
+        .f1-effect .f1-effect-flower:nth-of-type(0) {
+        left: 5%;
+        -webkit-animation-delay: 1s, 1s;
+        animation-delay: 1s, 1s;
+        width: 16px;
+        height: 16px;
+        background-position: 0 -23px; }
+        .f1-effect .f1-effect-flower:nth-of-type(1) {
+        left: 10%;
+        -webkit-animation-delay: 6s, 0.5s;
+        animation-delay: 6s, 0.5s;
+        width: 13px;
+        height: 13px;
+        background-position: 0 -50px; }
+        .f1-effect .f1-effect-flower:nth-of-type(2) {
+        left: 20%;
+        -webkit-animation-delay: 4s, 2s;
+        animation-delay: 4s, 2s;
+        width: 15px;
+        height: 15px;
+        background-position: -49px -35px; }
+        .f1-effect .f1-effect-flower:nth-of-type(3) {
+        left: 30%;
+        -webkit-animation-delay: 2s, 2s;
+        animation-delay: 2s, 2s;
+        width: 14px;
+        height: 14px;
+        background-position: -31px 0; }
+        .f1-effect .f1-effect-flower:nth-of-type(4) {
+        left: 40%;
+        -webkit-animation-delay: 8s, 3s;
+        animation-delay: 8s, 3s;
+        width: 16px;
+        height: 16px;
+        background-position: 0 -23px; }
+        .f1-effect .f1-effect-flower:nth-of-type(5) {
+        left: 50%;
+        -webkit-animation-delay: 6s, 2s;
+        animation-delay: 6s, 2s;
+        width: 13px;
+    height: 13px;
+        background-position: 0 -50px; }
+        .f1-effect .f1-effect-flower:nth-of-type(6) {
+        left: 60%;
+        -webkit-animation-delay: 2.5s, 1s;
+        animation-delay: 2.5s, 1s;
+        width: 15px;
+        height: 15px;
+        background-position: -49px -35px; }
+        .f1-effect .f1-effect-flower:nth-of-type(7) {
+        left: 70%;
+        -webkit-animation-delay: 1s, 0s;
+        animation-delay: 1s, 0s;
+        width: 14px;
+        height: 14px;
+        background-position: -31px 0; }
+        .f1-effect .f1-effect-flower:nth-of-type(8) {
+        left: 80%;
+        -webkit-animation-delay: 2s, 2s;
+        animation-delay: 2s, 2s;
+        width: 14px;
+        height: 14px;
+        background-position: -31px 0; }
+        .f1-effect .f1-effect-flower:nth-of-type(9) {
+    left: 90%;
+        -webkit-animation-delay: 8s, 3s;
+        animation-delay: 8s, 3s;
+        width: 16px;
+        height: 16px;
+        background-position: 0 -23px; }
+        .f1-effect .f1-effect-flower:nth-of-type(10) {
+        left: 95%;
+        -webkit-animation-delay: 6s, 2s;
+        animation-delay: 6s, 2s;
+        width: 13px;
+        height: 13px;
+        background-position: 0 -50px; }
+    
+        @-webkit-keyframes snowflakes-fall {
+        0% {
+        top: -10%; }
+        100% {
+        top: 100%; } }
+    
+        @-webkit-keyframes snowflakes-shake {
+        0% {
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px); }
+    50% {
+        -webkit-transform: translateX(80px);
+        transform: translateX(80px); }
+    100% {
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px); } }
+    
+        @keyframes snowflakes-fall {
+    0% {
+        top: -10%; }
+    100% {
+        top: 100%; } }
+    
+        @keyframes snowflakes-shake {
+0% {
+        transform: translateX(0px); }
+       50% {
+        transform: translateX(80px); }
+        100% {
+    transform: translateX(0px); } }
+        
+        </style>
+    
+ 
+    <div class="f1-effect">
+	
+        <div class="f1-effect-flower">
+        </div>
+        
+        <div class="f1-effect-flower">
+        </div>
+        
+        <div class="f1-effect-flower">
+        </div>
+        
+        <div class="f1-effect-flower">
+        </div>
+        
+        <div class="f1-effect-flower">
+        </div>
+        
+        <div class="f1-effect-flower">
+        </div>
+        
+        <div class="f1-effect-flower">
+        </div>
+        
+        <div class="f1-effect-flower">
+        </div>
+        
+        <div class="f1-effect-flower">
+        </div>
+        
+        <div class="f1-effect-flower">
+        </div>
+        
+    </div>
+    
+    <br>
+
+    <div>
+        <br>
+        <br>
+        <center><button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Thêm Sinh viên
+        </button></center>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">thêm mới</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <label for=""><b>ID</b></label>
+                            <input id="id" type="number" class="form-control">
+                        </div>
+                        <div>
+                            <label for=""><b>Name</b></label>
+                            <input id="name" type="text" class="form-control">
+                        </div>
+                        <div>
+                            <label for=""><b>Class</b></label>
+                            <input id="class" type="text" class="form-control">
+                        </div>
+                        <div>
+                            <label for=""><b>Mail</b></label>
+                            <input id="mail" type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" onclick="add()" class="btn btn-primary"
+                            data-bs-dismiss="modal">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Modal Header</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Some text in the modal.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Thẻ <button> trong HTML được sử dụng để tạo các nút có thể click bên trong form trên trang web của bạn. Trong TH này chúng ta cần 1 nút để lưu thông tin đã nhập,thêm thông tin vào dưới bảng -->
+    <br>
+    <br>
+    <br>
+
+    <table class="table table-light table-striped" id="render">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Class</th>
+                <th>Mail</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+    </table>
+    <!-- Bảng để hiển thị thông tin với các dòng,cột được chia bằng tr,th,td
+Phần nội dung,dữ liệu bên trong cần xử lí để hiển thị thông tin ra bên ngoài -->
+    <script>
+        //         thẻ script trong HTML được sử dụng để chỉ định kịch bản phía máy khách như JavaScript. Nó tạo điều kiện cho bạn đặt một kịch bản trong tài liệu HTML của bạn.
+
+        // JavaScript được sử dụng để thao tác với hình ảnh, xác nhận form và nội dung động. 
+        // Mảng data
+        var data = []
+        //         Function (hàm, chức năng), gọi chung là subprogram (chương trình con)có thể được gọi ở bên ngoài hoặc bên trong chính nó.
+
+        // Nó bao gồm tập hợp các câu lệnh gọi là(function body).Các giá trị có thể truyền đến một hàm, và một hàm có thể trả về giá trị.Chúng ta tạo 1 hàm add(thêm) cho bên trong là các biến chứa dữ liệu
+        
+        function add() {
+            var item_id = document.getElementById("id").value
+            var item_name = document.getElementById("name").value
+            var item_class = document.getElementById("class").value
+            var item_mail = document.getElementById("mail").value
+            var item = {
+                Id: item_id,
+                Name: item_name,
+                Class: item_class,
+                Mail: item_mail
+
+            }
+            // Phương thức document.getElementById() trả về phần tử của id được chỉ định. Ở đây chúng ta đã đặt id ở trên cho từng phần và xuống dưới chúng ta sẽ chỉ việc gọi id ở phần vùng dữ liệu đó,khi chúng ta thêm thông tin vào thì hàm add sẽ lấy thông tin để in ra.Trong hàm add có các biến được gán với id ở trên để lấy thông tin,biến item cuối  cùng chính là tổng chứa các biến cần thiết ở trên.
+            // Khi nhấn vào submit thì sẽ tạo ra nhiều item dữ liệu với đầy đủ thông tin:id,name,class,...Nhiều item cần phải khai báo vào 1 mảng để lưu trữ đó là mảng data.Hàm push() trong JavaScript được sử dụng để thêm một hoặc nhiều phần tử vào trong mảng. Phần tử được thêm sẽ nằm ở vị trí cuối mảng(các thông tin mới thêm vào sẽ đẩy dần xuống cuối)
+            // gán giá trị vào biến,var item cuối là biến mình tạo để tổng chứa các biến cần thiết của nó
+
+            let index = data.findIndex((c) => c.Id == item.Id) //đây là hàm tìm đến vị trí phần tử trong mảng 
+            console.log(index)
+            if (index >= 0) {                                         // đặt điều kiện là id >=0 nghĩa là phần tử phải tồn tại trong bảng
+                data.splice(index, 1, item) ;                             // chỉ lấy ra thông tin của 1 phần tử được tìm thấy 
+            } else {
+                data.unshift(item) ;                                     // nếu phần tử k tổn tại trong bảng thì sẽ là tạo mới thêm phần tử vào mảng
+
+            }
+            render();
+            clear();
+        }
+    //     Splice javascript là hàm dùng để xóa các phần tử trong mảng, hoặc thay thế một phần tử trong mảng thành một hoặc nhiều phần tử khác. Nói cách khác:
+
+    // Bạn có thể dùng hàm array splice để xóa phần tử.
+    // Hoặc dùng để bổ sung phần tử vào một vị trí nào đó trong mảng.
+
+        //         Tạo 1 hàm render bao gồm bảng với cấu trúc điều kiện for để chạy hết dữ liệu,dùng Ký hiệu đô la hay $ trong JavaScript là mã định danh JavaScript, có nghĩa là chúng xác định một đối tượng theo cách giống như tên. Các đối tượng mà chúng xác định bao gồm những thứ như biến, hàm, thuộc tính, sự kiện và đối tượng.
+
+        // Ký hiệu $ thường được sử dụng làm từ viết tắt cho hàm document.getElementById().Nói cách khác,chúng ta cần phải gọi dữ liệu vào hàng,cột để tạo thành 1 bảng hiển thị dữ liệu
+        function render() {
+            table = `<tr>     
+            <th>ID</th>
+            <th>Name</th>
+            <th>Class</th>
+
+            <th>Mail</th>
+
+            <th>Actions</th>
+
+        </tr>`
+            for (let i = 0; i < data.length; i++) {
+                table += `<tr>     
+            <td>${data[i].Id}</td>
+            <td>${data[i].Name}</td>
+            <td>${data[i].Class}</td>
+
+            <td>${data[i].Mail}</td>
+
+            <th> 
+                <button onclick="deleteItem(${data[i].Id})">Delete</button>
+                <button onclick="editItem(${data[i].Id})">Edit</button>                </th>
+        </tr>`
+                // 2 nút để hiển thị chức năng xóa,sửa thông tin,đương nhiên phải thêm id để biết phần thông tin cần xóa ở vị trí nào
+
+//                 tạo ra các cột rồi lấy dữ liệu cho từng cột
+
+// bên dưới là lấy dữ liệu cho dòng,ghép lại nó thành 1 bảng
+            }
+            document.getElementById("render").innerHTML = table;
+            // $(document).ready(function () {
+            //     $("#myBtn").click(function () {
+            //         $("#myModal").modal();
+            //     });
+            // });
+        }
+        function clear() {
+            document.getElementById("id").value = "";
+            document.getElementById("name").value = "";
+            document.getElementById("class").value = "";
+
+            document.getElementById("mail").value = "";
+
+        }
+//         hàm clear đó là làm cho dữ liệu nhập ở form sẽ về rỗng
+// Để ng dùng nhập cái mới
+        function deleteItem(x) {
+            if (confirm("Bạn có muốn xóa không?")==true){
+            for (let i = 0; i < data.length; i++) {
+                if (data[i].Id == x) {
+                    data.splice(i, 1);
+                    render();
+                }
+            }
+        }
+
+
+        }
+        // Dùng vòng lặp for để xóa từng id thuộc mảng data,Hàm splice sẽ thay thế một hoặc một số phần tử của mảng bằng một hoặc một số phần tử khác, lưu ý rằng số phần tử bị bỏ đi có thể ít hơn số phần tử được thêm vào và ngược lại.Cú pháp là:splice(start, deleteCount).start - là vị trí chỉ mục bắt đầu thay thế.
+        // deleteCount - là số phần tử sẽ bị lại bỏ, tính tử vị trí chỉ mục start, và bao gồm cả phần tử start. Nếu start mang giá trị 0 thì sẽ không có phần tử nào bị loại bỏ
+        function editItem(x) {
+            alert("Bạn có chắc muốn thay đổi thông tin?");
+            for (let i = 0; i < data.length; i++) {
+                if (data[i].Id == x) {
+                    document.getElementById("id").value = data[i].Id;
+                    document.getElementById("name").value = data[i].Name;
+                    document.getElementById("class").value = data[i].Class;
+                    document.getElementById("mail").value = data[i].Mail;
+
+                }
+            }
+
+
+        }
+
+
+    </script>
+</body>
+
+</html>
+<!-- Câu lệnh if
+
+•Đánh giá một điều kiện và đưa ra lựa chọn
+thực thi một khối lệnh dựa trên điều kiện
+đó
+•Nếu điều kiện có giá trị đúng (true) thì
+khối lệnh bên trong if sẽ được thực thi
+•Nếu điều kiện có giá trị sai (false) thì khối
+lệnh bên trong if sẽ được bỏ qua. Luồng
+thực thi sẽ chuyển xuống ngay sau khối
+lệnh if.
+•Câu lệnh if-else lựa chọn thực thi 1 trong 2 khối lệnh thông
+qua việc đánh giá một điều kiện
+condition: điều kiện để đánh giá. Nếu condition trả về true thì khối lệnh bên
+trong if được thực thi. Nếu condition trả về false thì khối lệnh trong else
+được thực thi.
+Vòng lặp for
+
+for (khoi_tao_bien ; check_dieu_kien ; tang/giam_bien) {  
+    // Khối lệnh được thực thi
+}
+
+khoi_tao_bien là int i = 0
+check_dieu_kien là i < month với month = 12
+tang_bien: vòng lặp for này sử dụng tăng biến với i++ (tăng i lên 1 đơn vị) -->
