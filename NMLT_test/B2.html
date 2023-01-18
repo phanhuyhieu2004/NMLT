@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2</title>
+</head>
+<body>
+    <script>
+//             let size = parseInt(prompt("Nhập kích thước của mảng: "));
+
+// while (size = 10) {
+//     size = parseInt(prompt("Nhập lại, kích thước mảng phải bằng 10: "));
+// }
+
+// let array = [];
+
+// for (let i = 1; i <=size; i++) {       
+//     array.push(parseInt(prompt("Nhap phan tu thu: " +i)));
+// }
+// let result = sumArray(array);
+// document.write(result);
+
+// function sumArray(array) {
+//     let sum = 0;
+    
+// for (let j = 0; j <array.length; j++) {         
+//    sum += array[j];
+//     }
+// return sum;
+// }
+let size = parseInt(prompt("Nhập kích thước của mảng: "));
+while (size < 10) {
+  size = parseInt(prompt("Nhập lại, kích thước mảng phải bằng 10: "));
+}
+
+let array = [];
+       
+for (let i = 1; i <=size; i++) {       
+    array.push(parseInt(prompt("Nhap phan tu thu: " +i)));
+
+ }    
+ for(let i = 0; i < size; i++){
+    document.write(array[i] + " | ");
+}
+
+
+    </script>
+</body>
+</html>

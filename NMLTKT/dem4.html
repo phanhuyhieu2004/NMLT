@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3: Tính tổng các số lẻ</title>
+</head>
+<body>
+   
+    <script>
+        function cal(){
+        let result =0;
+        let inputNum = +prompt('Nhập số lớn hơn 10');
+        while (inputNum<= 10){
+            inputNum = +prompt('Số của bạn không lớn hơn 10 mời nhập lại');
+        }
+        if (inputNum>10) {
+            for(let i=0;i <= inputNum;i++){
+                if (i%2 !==0){
+                    result += i ;
+                }
+            }
+            alert('Tổng các sổ lẻ từ 0 đến ' + inputNum + ' là: ' +  result);
+        }
+            
+        }
+
+        cal()
+    </script>
+</body>
+</html>

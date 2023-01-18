@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: rgb(190, 250, 230);">
+
+    <script>
+
+        let number = n = prompt("Nhập số vào đây ");
+
+        if (n <= 10) {
+            while (n <= 10) {
+                number = n = prompt("Nhập lại số: ");
+            }
+        } else {
+            let sumNumber = sum(number);
+
+            document.write(sumNumber);
+        }
+
+
+        function sum(input) {
+            let sum = 0;
+            for (let i = 0; i < input; i++) {
+                if (i % 2 == 1) {
+                    sum += i;
+                }
+            }
+
+            return sum;
+        }
+
+    </script>
+
+</body>
+
+</html>

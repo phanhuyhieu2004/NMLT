@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<style>
+ /* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} */
+
+ul{
+    list-style-type: none;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header , .content{
+    padding: 8px 50px;
+    background-color: rgb(73, 120, 230);
+    color: #fff;
+}
+.header-logo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.login{
+    background-color: rgb(26, 43, 222);
+    border-radius: 4px;
+    padding: 4px 20px;
+}
+.login-item{
+    margin: 4px 0;
+}
+
+.login-item span {
+    width: 50px;
+    display: inline-block;
+}
+
+
+.login-item input{
+    outline: none;
+    border: none;
+    background: #fff;
+    border-radius: 20px;
+    height: 25px;
+}
+
+.btn{
+    padding: 0 12px;
+}
+
+.header-nav ul{
+    margin-left: 50px;
+}
+.header-nav ul li{
+    display: inline-block;
+    padding: 14px 22px;;
+    cursor: pointer;
+}
+.header-nav{
+    margin-top: 50px;
+    background: rgb(6, 42, 90);
+    margin-bottom: -8px;
+    border-radius: 4px;
+}
+
+.content{
+    display: flex;
+
+}
+.content-left{
+    width: 70%;
+    border: 1px solid ;
+}
+
+
+.content-right{
+    width: 30%;
+    padding: 8px;
+}
+
+.right-item{
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.right-item span{
+    display: block;
+    background-color: #000;
+    padding: 4px 5px;
+}
+
+.right-item ul {
+    border: 1px solid #000;
+    padding: 2px;
+}
+
+.right-item ul li {
+    padding: 8px 4px;
+}
+
+.right-img{
+    width:70px;
+    height: 70px;
+    border: 1px solid #000;
+    margin: 4px 0;
+    display: inline-block;
+}
+.right-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+</style>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="header-logo">
+                <div class="logo">
+                    <img src="./assets/images/logo.png" alt="">
+                </div>
+                <div class="login">
+                    <div class="login-item">
+                        <span>Login</span>
+                        <input type="text"/>
+                    </div>
+                    <div class="login-item">
+                        <span>Login</span>
+                        <input type="text"/>
+                    </div>
+                    <div class="login-item">
+                        <span></span>
+                        <input type="button" value="Đăng nhập" class="btn"/>
+                    </div>
+                </div>
+            </div>
+            <div class="header-nav">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Content</li>
+                    <li>List</li>
+                    <li>UL</li>
+                    <li>LI</li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-left">
+
+            </div>
+            <div class="content-right">
+                <div class="right-item">
+                    <span>GAMES</span>
+                    <div class="right-img">
+                        <img src="./assets/images/csgo.png" alt="">
+                    </div>
+                    <div class="right-img">
+                        <img src="./assets/images/csgo.png" alt="">
+                    </div>
+                    <div class="right-img">
+                        <img src="./assets/images/csgo.png" alt="">
+                    </div>
+                    <div class="right-img">
+                        <img src="./assets/images/csgo.png" alt="">
+                    </div>
+                </div>
+                <div class="right-item">
+                    <span>GAMES</span>
+                    <ul>
+                        <li>lorem</li>
+                        <li>lorem</li>
+                        <li>lorem</li>
+                        <li>lorem</li>
+                        <li>lorem</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

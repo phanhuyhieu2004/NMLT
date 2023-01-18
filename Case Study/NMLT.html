@@ -259,14 +259,14 @@
                 </div>
 
             </div>
-        </div>
+        </div>;l,
     </div>
     <!-- Thẻ <button> trong HTML được sử dụng để tạo các nút có thể click bên trong form trên trang web của bạn. Trong TH này chúng ta cần 1 nút để lưu thông tin đã nhập,thêm thông tin vào dưới bảng -->
     <br>
     <br>
     <br>
 
-    <table class="table table-light table-striped" id="render">
+    <table class="table table-dark table-striped" id="render">
         <thead>
             <tr>
                 <th>ID</th>
@@ -288,7 +288,6 @@ Phần nội dung,dữ liệu bên trong cần xử lí để hiển thị thôn
         //         Function (hàm, chức năng), gọi chung là subprogram (chương trình con)có thể được gọi ở bên ngoài hoặc bên trong chính nó.
 
         // Nó bao gồm tập hợp các câu lệnh gọi là(function body).Các giá trị có thể truyền đến một hàm, và một hàm có thể trả về giá trị.Chúng ta tạo 1 hàm add(thêm) cho bên trong là các biến chứa dữ liệu
-        
         function add() {
             var item_id = document.getElementById("id").value
             var item_name = document.getElementById("name").value
@@ -303,24 +302,18 @@ Phần nội dung,dữ liệu bên trong cần xử lí để hiển thị thôn
             }
             // Phương thức document.getElementById() trả về phần tử của id được chỉ định. Ở đây chúng ta đã đặt id ở trên cho từng phần và xuống dưới chúng ta sẽ chỉ việc gọi id ở phần vùng dữ liệu đó,khi chúng ta thêm thông tin vào thì hàm add sẽ lấy thông tin để in ra.Trong hàm add có các biến được gán với id ở trên để lấy thông tin,biến item cuối  cùng chính là tổng chứa các biến cần thiết ở trên.
             // Khi nhấn vào submit thì sẽ tạo ra nhiều item dữ liệu với đầy đủ thông tin:id,name,class,...Nhiều item cần phải khai báo vào 1 mảng để lưu trữ đó là mảng data.Hàm push() trong JavaScript được sử dụng để thêm một hoặc nhiều phần tử vào trong mảng. Phần tử được thêm sẽ nằm ở vị trí cuối mảng(các thông tin mới thêm vào sẽ đẩy dần xuống cuối)
-            // gán giá trị vào biến,var item cuối là biến mình tạo để tổng chứa các biến cần thiết của nó
 
             let index = data.findIndex((c) => c.Id == item.Id) //đây là hàm tìm đến vị trí phần tử trong mảng 
-            console.log(index)
             if (index >= 0) {                                         // đặt điều kiện là id >=0 nghĩa là phần tử phải tồn tại trong bảng
-                data.splice(index, 1, item) ;                             // chỉ lấy ra thông tin của 1 phần tử được tìm thấy 
+                data.splice(index, 1, item)                               // chỉ lấy ra thông tin của 1 phần tử được tìm thấy 
             } else {
-                data.unshift(item) ;                                     // nếu phần tử k tổn tại trong bảng thì sẽ là tạo mới thêm phần tử vào mảng
+                data.unshift(item)                                         // nếu phần tử k tổn tại trong bảng thì sẽ là tạo mới thêm phần tử vào mảng
 
+                ;./
             }
-            render();
-            clear();
+            render()
+            clear()
         }
-    //     Splice javascript là hàm dùng để xóa các phần tử trong mảng, hoặc thay thế một phần tử trong mảng thành một hoặc nhiều phần tử khác. Nói cách khác:
-
-    // Bạn có thể dùng hàm array splice để xóa phần tử.
-    // Hoặc dùng để bổ sung phần tử vào một vị trí nào đó trong mảng.
-
         //         Tạo 1 hàm render bao gồm bảng với cấu trúc điều kiện for để chạy hết dữ liệu,dùng Ký hiệu đô la hay $ trong JavaScript là mã định danh JavaScript, có nghĩa là chúng xác định một đối tượng theo cách giống như tên. Các đối tượng mà chúng xác định bao gồm những thứ như biến, hàm, thuộc tính, sự kiện và đối tượng.
 
         // Ký hiệu $ thường được sử dụng làm từ viết tắt cho hàm document.getElementById().Nói cách khác,chúng ta cần phải gọi dữ liệu vào hàng,cột để tạo thành 1 bảng hiển thị dữ liệu
@@ -345,47 +338,37 @@ Phần nội dung,dữ liệu bên trong cần xử lí để hiển thị thôn
 
             <th> 
                 <button onclick="deleteItem(${data[i].Id})">Delete</button>
-                <button onclick="editItem(${data[i].Id})">Edit</button>                </th>
+                <button onclick="editItem(${data[i].Id})">Edit</button>
+                </th>
         </tr>`
                 // 2 nút để hiển thị chức năng xóa,sửa thông tin,đương nhiên phải thêm id để biết phần thông tin cần xóa ở vị trí nào
 
-//                 tạo ra các cột rồi lấy dữ liệu cho từng cột
 
-// bên dưới là lấy dữ liệu cho dòng,ghép lại nó thành 1 bảng
             }
-            document.getElementById("render").innerHTML = table;
-            // $(document).ready(function () {
-            //     $("#myBtn").click(function () {
-            //         $("#myModal").modal();
-            //     });
-            // });
+            document.getElementById("render").innerHTML = table
         }
         function clear() {
             document.getElementById("id").value = "";
             document.getElementById("name").value = "";
             document.getElementById("class").value = "";
 
-            document.getElementById("mail").value = "";
+            document.getElementById("mail").value = ""
 
         }
-//         hàm clear đó là làm cho dữ liệu nhập ở form sẽ về rỗng
-// Để ng dùng nhập cái mới
+        // hàm clear dùng để làm trống dữ liệu(kp xóa)
         function deleteItem(x) {
-            if (confirm("Bạn có muốn xóa không?")==true){
             for (let i = 0; i < data.length; i++) {
                 if (data[i].Id == x) {
-                    data.splice(i, 1);
-                    render();
+                    data.splice(i, 1)
+                    render()
                 }
             }
-        }
 
 
         }
         // Dùng vòng lặp for để xóa từng id thuộc mảng data,Hàm splice sẽ thay thế một hoặc một số phần tử của mảng bằng một hoặc một số phần tử khác, lưu ý rằng số phần tử bị bỏ đi có thể ít hơn số phần tử được thêm vào và ngược lại.Cú pháp là:splice(start, deleteCount).start - là vị trí chỉ mục bắt đầu thay thế.
         // deleteCount - là số phần tử sẽ bị lại bỏ, tính tử vị trí chỉ mục start, và bao gồm cả phần tử start. Nếu start mang giá trị 0 thì sẽ không có phần tử nào bị loại bỏ
         function editItem(x) {
-            alert("Bạn có chắc muốn thay đổi thông tin?");
             for (let i = 0; i < data.length; i++) {
                 if (data[i].Id == x) {
                     document.getElementById("id").value = data[i].Id;

@@ -5,7 +5,9 @@ body {
 
 #Main {
     width: 100%;
+    /* rộng */
     height: 100%;
+    /* cao */
     padding: 0;
     margin-left: auto;
     margin-right: auto;
@@ -14,7 +16,7 @@ body {
 #Head {
     width: 100%;
     height: 60px;
-    background-color: #F5F5F5;
+    background-color: #881b1b;
     border: 10px solid #f9f5f5;
     margin-bottom: 5px;
     /* top: 0;
@@ -23,13 +25,16 @@ body {
 }
 
 #Head-link {
-    height: 30px;
-    line-height: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
+    height: 40px;
+    line-height: 40px;
+  /* thiết lập chiều cao giữa các dòng. */
+    padding-left: 50px;
+    /* padding là khoảng trống nằm giữa nội dung và viền. */
+    padding-right: 50px;
     border: 10px solid #f9f7f7;
-    /* background-color: #F5F5F5; */
-    margin-bottom: 5px;
+    background-color: #F5F5F5;
+    margin-bottom: 10px;
+    /* margin là khoảng trống nằm giữa viền và phần tử tiếp theo */
     text-align: center;
 }
 
@@ -38,7 +43,7 @@ body {
     min-height: 1070px;
     border: 10px solid #f8f4f4;
     float: left;
-    /* background-color: #c8e1c8; */
+    background-color: #3fd73f;
     margin-bottom: 20px;
     margin-right: 20px;
 }
@@ -46,8 +51,9 @@ body {
 .content {
     width: 850px;
     min-height: 1070px;
-    float: right;
-    /* background-color: blanchedalmond; */
+    float: left;
+    /* Thuộc tính float xác định có hay không một thành phần được float (trôi nổi). */
+    background-color: blanchedalmond;
     margin-bottom:10px;
     border: 10px solid #f9f3f3;
    
@@ -62,4 +68,8 @@ body {
     border: 10px solid #fcfafa;
     text-align: center;
     clear: both;
+    
+    /* Khi cả 2 thành phần A và thành phần B sử dụng float, chúng ta không thể sử dụng clear: left; hay clear: right; để ngăn chặn thành phần C chiếm vùng không gian còn trống, trong trường hợp này ta sử dụng thuộc tính clear: both; để ngăn chặn sự chiếm vùng của thành phần C.
+    Thuộc tính clear: both; có thể ngăn chặn sự chiếm vùng không gian cả khi chỉ có một thành phần sử dụng float (left hoặc right) hoặc nhiều thành phần sử dụng float. */
+
 }

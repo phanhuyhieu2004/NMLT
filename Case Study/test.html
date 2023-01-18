@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS NMLT Cơ bản</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+    <!-- Phần hiển thị trên màn hình
+    
+    <label> định nghĩa nhãn cho thành phần <input />.
+     <label> không hiển thị bất cứ gì đặc biệt cho người dùng, tuy nhiên nó cung cấp một cải thiện cho người sử dụng chuột, nếu click chuột vào nhãn, sẽ đưa con trỏ chuột vào vùng <input />.
+    Muốn sử dụng hiệu quả <label>, cần thiết phải cho giá trị id của <input /> và giá trị for của <label>, hai giá trị này phải trùng nhau.
+     <input /> được sử dụng cho người dùng nhập hay chọn thông tin.
+    <id></id> dùng để đặt tên cho một phần tử trong HTML, mỗi thuộc tính id chỉ chỉ định cho một phần tử duy nhất trong file HTML hiện hành
+    Tùy vào những thông tin cần nhập,chúng ta sẽ tạo khung hiển thị để nhập các dữ liệu cần thiết vào  -->
+    <br>
+   
+    <br>
+    <br>
+    <h1>gfff</h1>
+    <div>
+        <label for="">Name</label>
+        <input type="text" id="name">
+    </div>
+    <br>
+    <br>
+    <div>
+        <label for="">Class</label>
+    <input type="text" id="class">
+    </div>
+    <br>
+    <br>
+    <div>
+        <label for="">Mail</label>
+        <input type="text" id="mail">
+    </div>  
+   
+<br>
+<div>
+    <button onclick="add()">Submit</button>
+    <!-- Thẻ <button> trong HTML được sử dụng để tạo các nút có thể click bên trong form trên trang web của bạn. Trong TH này chúng ta cần 1 nút để lưu thông tin đã nhập,thêm thông tin vào dưới bảng
+</div> -->
+<br>
+<br>
+
+    <table class="table table-dark table-striped"id="render">  
+       <thead>
+         <tr>     
+            <th>ID</th>
+            <th>Name</th>
+            <th>Class</th>
+            <th>Mail</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    </table>
+    <!-- Bảng để hiển thị thông tin với các dòng,cột được chia bằng tr,th,td
+Phần nội dung,dữ liệu bên trong cần xử lí để hiển thị thông tin ra bên ngoài -->
+    <script>
+//         thẻ script trong HTML được sử dụng để chỉ định kịch bản phía máy khách như JavaScript. Nó tạo điều kiện cho bạn đặt một kịch bản trong tài liệu HTML của bạn
+// JavaScript được sử dụng để thao tác với hình ảnh, xác nhận form và nội dung động. 
+// Mảng data
+var data=[]
+//         Function (hàm, chức năng), gọi chung là subprogram (chương trình con)có thể được gọi ở bên ngoài hoặc bên trong chính nó.
+
+// Nó bao gồm tập hợp các câu lệnh gọi là(function body).Các giá trị có thể truyền đến một hàm, và một hàm có thể trả về giá trị.Chúng ta tạo 1 hàm add(thêm) cho bên trong là các biến chứa dữ liệu
+// function checkID(id){
+
+// for (var i = 0; i < data.length; i++){
+//     if (data[i].id == id) {
+//         return true;
+//     }
+// }
+// }
+// function checkInfo(){
+//             var id = document.getElementById('id').value;
+//             var name = document.getElementById('name').value;
+//             var email = document.getElementById('email').value;
+//             var phone = document.getElementById('phone').value;
+
+//             if (id && name && email && phone) {
+//                 return true;
+//             }else{
+//                 alert('Vui lòng nhập đầy đủ thông tin trước khi thêm!');
+//             }
+//         }
+//         if (checkID(id)) {
+//                 alert("ID đã tồn tại, vui lòng nhập ID khác!");
+//             }else if(checkInfo()){
+//                 this.data.push(item);
+//             }
+
+// function add(){
+//             var item_id=document.getElementById("id").value
+//             var item_name=document.getElementById("name").value
+//             var item_class=document.getElementById("class").value
+//            var item_mail=document.getElementById("mail").value
+//             var item={
+//                 Id:item_id,
+//                 Name:item_name,
+//                 Class:item_class,
+//                 Mail:item_mail
+
+//             }
+            // Phương thức document.getElementById() trả về phần tử của id được chỉ định. Ở đây chúng ta đã đặt id ở trên cho từng phần và xuống dưới chúng ta sẽ chỉ việc gọi id ở phần vùng dữ liệu đó,khi chúng ta thêm thông tin vào thì hàm add sẽ lấy thông tin để in ra.Trong hàm add có các biến được gán với id ở trên để lấy thông tin,biến item cuối  cùng chính là tổng chứa các biến cần thiết ở trên.
+            // Khi nhấn vào submit thì sẽ tạo ra nhiều item dữ liệu với đầy đủ thông tin:id,name,class,...Nhiều item cần phải khai báo vào 1 mảng để lưu trữ đó là mảng data.Hàm push() trong JavaScript được sử dụng để thêm một hoặc nhiều phần tử vào trong mảng. Phần tử được thêm sẽ nằm ở vị trí cuối mảng(các thông tin mới thêm vào sẽ đẩy dần xuống cuối)
+                 let index=data.findIndex((c)=>c.Id==item.Id)
+//      if(index>=0){
+//     data.splice(index,1,item)
+//     }else{
+//     data.push(item)
+
+// }
+//   render()
+//           clear()
+//         }
+//         Tạo 1 hàm render bao gồm bảng với cấu trúc điều kiện for để chạy hết dữ liệu,dùng Ký hiệu đô la hay $ trong JavaScript là mã định danh JavaScript, có nghĩa là chúng xác định một đối tượng theo cách giống như tên. Các đối tượng mà chúng xác định bao gồm những thứ như biến, hàm, thuộc tính, sự kiện và đối tượng.
+
+// Ký hiệu $ thường được sử dụng làm từ viết tắt cho hàm document.getElementById().Nói cách khác,chúng ta cần phải gọi dữ liệu vào hàng,cột để tạo thành 1 bảng hiển thị dữ liệu
+// function render(){
+//     table =`<tr>     
+//             <th>ID</th>
+//             <th>Name</th>
+//             <th>Class</th>
+
+//             <th>Mail</th>
+
+//             <th>Actions</th>
+
+//         </tr>`
+//         for(let i=0;i<data.length;i++){
+//             table +=`<tr>     
+//             <td>${data[i].Id}</td>
+//             <td>${data[i].Name}</td>
+//             <td>${data[i].Class}</td>
+
+//             <td>${data[i].Mail}</td>
+
+//             <th> 
+//                 <button onclick="deleteItem(${data[i].Id})">Delete</button>
+//                 <button onclick="editItem(${data[i].Id})">Edit</button>
+//                 </th>
+//         </tr>`
+        // 2 nút để hiển thị chức năng xóa,sửa thông tin,đương nhiên phải thêm id để biết phần thông tin cần xóa ở vị trí nào
+
+
+//         }
+//         document.getElementById("render").innerHTML=table
+// }
+// function clear(){
+//     document.getElementById("id").value="";
+//     document.getElementById("name").value="";
+//     document.getElementById("class").value="";
+
+//     document.getElementById("mail").value=""
+
+// }
+// hàm clear dùng để làm trống dữ liệu(kp xóa)
+function deleteItem(x){
+    for(let i=0;i<data.length;i++){
+        if(data[i].Id==x){
+            data.splice(i,1)
+            render()
+        }
+    }
+
+
+}
+// Dùng vòng lặp for để xóa từng id thuộc mảng data,Hàm splice sẽ thay thế một hoặc một số phần tử của mảng bằng một hoặc một số phần tử khác, lưu ý rằng số phần tử bị bỏ đi có thể ít hơn số phần tử được thêm vào và ngược lại.Cú pháp là:splice(start, deleteCount).start - là vị trí chỉ mục bắt đầu thay thế.
+// deleteCount - là số phần tử sẽ bị lại bỏ, tính tử vị trí chỉ mục start, và bao gồm cả phần tử start. Nếu start mang giá trị 0 thì sẽ không có phần tử nào bị loại bỏ
+function editItem(x){
+    for(let i=0;i<data.length;i++){
+        if(data[i].Id==x){
+            document.getElementById("id").value=data[i].Id;
+            document.getElementById("name").value=data[i].Name;
+            document.getElementById("class").value=data[i].Class;
+            document.getElementById("mail").value=data[i].Mail;
+
+
+            
+        }
+    }
+
+
+}
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+
+ 
+#main{
+    width: 100%;
+    /* rộng */
+    height: 100%;
+    /* cao */
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #333;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header , .content{
+    padding: 8px 50px;
+    background-color: rgb(73, 120, 230);
+    color: #fff;
+}
+.header-logo{
+    display: flex;
+    justify-content: space-between;
+}
+#head{
+    height: 100%;
+    background-color:gray;
+    border: 5px solid yellow;
+    margin-bottom:10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#menu li {
+    color: #f1f1f1;
+    float: left;
+    width: 130px;
+    height: 30px;
+    line-height: 50px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  #menu ul {
+    background: black;
+    list-style-type: none;
+    overflow: hidden;
+    width: 100%;
+  }
+  #menu a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+  }
+  #menu a:hover {
+    background: gray;
+    color: #333;
+  }
+
+
+
+#content1{
+    width:100%;
+    height:350px;
+    /* Thuộc tính float xác định có hay không một thành phần được float (trôi nổi). */
+    background-color: black;
+   text-align: left;
+   padding: 10px;
+   
+}
+
+
+#left{
+    width:25%;
+    height: 300px;
+    /* Thuộc tính float xác định có hay không một thành phần được float (trôi nổi). */
+    background-color:gold;
+    float:left
+}
+#content2{
+    width:50%;
+    height: 300px;
+    /* Thuộc tính float xác định có hay không một thành phần được float (trôi nổi). */
+    background-color: green;
+    float:left
+    
+}
+
+#right{
+    width:25%;
+    height: 300px;
+    /* Thuộc tính float xác định có hay không một thành phần được float (trôi nổi). */
+    background-color:red;
+    float:left
+}
+.img{
+padding: 5px;
+   float: left;
+    margin-right: 10px;
+
+}
+
+
+#footer{
+    left: 0;
+    border-top: 5px solid tan;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    background-color: black;
+    color: white;
+}
+#container{
+    padding: 40px;
+    margin: auto;
+    width: 60%;
+}
+#container .movie-category{
+    text-align: center;
+    margin: auto;
+    width: 30%;
+    display: inline-block;
+    justify-content: center;
+    justify-items: center;
+}
+#container .movie-category div{
+    padding-top: 10px;
+}
+.movie-category a{
+    color: rgb(63,228,254);
+    font-size: 20px;
+    text-decoration: none;
+}
